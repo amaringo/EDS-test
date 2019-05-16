@@ -11,7 +11,7 @@ export class HaveibeenpwnedApiService {
   constructor(protected http?: HttpClient) { }
 
   getAllBreaches(): Promise<BreachModel[]> {
-    const url = 'https://haveibeenpwned.com/api/v2/breaches';
+    const url = 'http://46.101.229.69:3000/api/v2/breaches';
     /*const headers = new HttpHeaders()*/
       /*.append('User-Agent', 'Pwnage-Web-Checker'); не срабатывает, браузер отказывается менять на кастомное значение.
        Ошибка - Refused to set unsafe header "User-Agent"*/
@@ -28,7 +28,7 @@ export class HaveibeenpwnedApiService {
     console.log('getAccountDiscredits');
     profile = searchType === 'everywhere' ? profile : profile + '?domain=' + searchType;
     console.log();
-    const url = 'https://haveibeenpwned.com/api/v2/breachedaccount/' + profile;
+    const url = 'http://46.101.229.69:3000/api/v2/breachedaccount/' + profile;
     return this.http
       .get(url/*,{headers}*/)
       .toPromise()
