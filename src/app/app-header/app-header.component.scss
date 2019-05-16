@@ -1,0 +1,51 @@
+.header {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  text-align:center;
+
+}
+
+.header__title {
+  font-size: 50px;
+
+}
+
+.header__intro {
+  margin-bottom: 50px;
+  background: #e4e4e4;
+
+}
+
+.header__page-switcher {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+
+  p {
+    margin: 0;
+
+}
+}
+
+.header__switcher-btn {
+  border:none;
+  height: 30px;
+  font-size: 20px;
+  margin: 0;
+  background:none;
+  font-family: "Open Sans", sans-serif;
+
+  &:hover {
+    box-shadow:black 0 3px 0 0;
+    cursor:pointer;
+
+}
+}
+
+.btn-active {
+  background-color: #f0f0f0;
+  box-shadow:black 0 3px 0 0;
+
+}
